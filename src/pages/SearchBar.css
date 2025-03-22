@@ -1,0 +1,308 @@
+
+/* src/pages/SearchBar.css */
+.search-bar {
+  position: relative;
+  width: 600px;
+  margin: 20px auto;
+  margin-left: 15%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 24px;
+  background-color: #020a16;
+  border: none;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.search-input:focus {
+  background-color: rgb(15, 1, 1);
+  box-shadow: 0 0 0 2px #1877f2;
+}
+
+.search-results,
+.recent-searches {
+  width: 600px;
+  background: rgb(228, 218, 213);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-top: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  color: #010914;
+}
+
+.result-section {
+  margin-bottom: 10px;
+}
+
+.result-section h3 {
+  font-weight: bold;
+  color: #010914;
+  margin-bottom: 5px;
+}
+
+.recent-searches-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.action-buttons button {
+  background: transparent;
+  color: #1877f2;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+} 
+
+.search-item{
+  display: flex;
+  justify-content: space-between; /*  Aligns content to left and button to right */
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #9e480e;
+  cursor: pointer;
+  transition: background 0.2s;
+  
+}
+
+.search-item:hover {
+  background-color: #f0f2f5;
+}
+
+
+.friend-card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search-item:hover,
+.friend-card:hover {
+  background-color: #e1d2ad;
+  font-weight: 500;
+}
+
+.delete-dot {
+  background: transparent;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 18px;
+  transition: color 0.2s;
+  margin-left: auto; /*  Pushes the button to the far right */
+  padding: 0 10px;   /*  Adds spacing near the right margin */
+}
+
+.delete-dot:hover {
+  color: red;
+}
+
+.friend-photo,
+.search-user-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.search-post-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-left: 10px;
+}
+
+.friend-info,
+.search-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.friend-name,
+.search-user-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.search-user-email {
+  font-size: 12px;
+  color: #666;
+}
+
+
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+/* Section Header */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.section-header h3 {
+  font-weight: bold;
+  color: #1877f2;
+  margin: 0;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  background: transparent;
+  border: none;
+  color: #1877f2;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.toggle-btn:hover {
+  color: #0d47a1;
+}
+
+/* Grid Layout */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+/* User Card Styling */
+.user-card {
+  background: #f0f2f5;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Profile Image */
+.user-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* User Info */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.user-name {
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Buttons */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.action-buttons :hover {
+  transform: translateX(-2px);
+  
+}
+
+.follow-btn, .delete-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.saved-posts {
+  margin-top: 20px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.saved-posts h3 {
+  font-weight: bold;
+  color: #1877f2;
+  margin-bottom: 10px;
+}
+
+.savedposts-horizontal-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.post-card {
+  flex: 0 0 240px; /* Width remains same */
+  height: 320px; /* ⬆️ Increased height */
+  background: rgb(228, 218, 213);
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures content is spaced properly */
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-photo {
+  width: 100%;
+  height: 250px; /* ⬆️ Increased height for images */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.post-info {
+  font-size: 16px;
+  color: #333;
+}
+
